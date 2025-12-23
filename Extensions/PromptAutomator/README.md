@@ -1,6 +1,6 @@
 # Prompt Automator (Chrome Extension)
 
-Automate entering prompts from a list and clicking a Generate button on any website.
+Chrome extension that queues Ideogram prompts from a text list, types them into the prompt field, and clicks Generate automatically with speed controls.
 
 ## Installation
 
@@ -46,3 +46,7 @@ Automate entering prompts from a list and clicking a Generate button on any webs
 
 M Kashif  
 mkashifiqbalpk@gmail.com
+
+## Support
+
+Buy me a coffee: https://buymeacoffee.com/devkashif
