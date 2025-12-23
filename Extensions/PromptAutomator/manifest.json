@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Automator",
+  "version": "1.0.0",
+  "description": "Automate prompt entry and generation clicks from a list.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Prompt Automator"
+  }
+}

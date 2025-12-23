@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prompt Automator</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="title">Prompt Automator</div>
+        <div class="subtitle">Queue prompts and click Generate automatically.</div>
+      </header>
+
+      <section class="card">
+        <label class="label" for="fileInput">Upload TXT (comma or newline separated)</label>
+        <input id="fileInput" type="file" accept=".txt" />
+
+        <label class="label" for="promptInput">Or paste prompts</label>
+        <textarea
+          id="promptInput"
+          rows="6"
+          placeholder="prompt one, prompt two, prompt three"
+        ></textarea>
+        <div class="hint">Separated by commas or new lines.</div>
+      </section>
+
+      <section class="card">
+        <label class="label" for="inputSelector">Input selector (optional)</label>
+        <input
+          id="inputSelector"
+          type="text"
+          placeholder="textarea, input.prompt, [contenteditable]"
+        />
+
+        <label class="label" for="buttonSelector">Generate button selector (optional)</label>
+        <input id="buttonSelector" type="text" placeholder="button.generate" />
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <label class="label" for="typingSpeed">Typing speed (ms per char)</label>
+          <div class="value" id="typingSpeedValue">20</div>
+        </div>
+        <input id="typingSpeed" type="range" min="0" max="100" value="20" />
+
+        <div class="row">
+          <label class="label" for="delayBetween">Delay between prompts (ms)</label>
+          <div class="value" id="delayBetweenValue">1500</div>
+        </div>
+        <input id="delayBetween" type="range" min="300" max="8000" value="1500" />
+      </section>
+
+      <section class="card actions">
+        <button id="startBtn" class="primary">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="cancelBtn" class="danger">Cancel</button>
+      </section>
+
+      <section class="card status">
+        <div class="status-line">
+          <span class="status-label">Status</span>
+          <span id="statusText" class="status-text">Idle</span>
+        </div>
+        <div class="status-line">
+          <span class="status-label">Progress</span>
+          <span id="progressText" class="status-text">0 / 0</span>
+        </div>
+      </section>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
